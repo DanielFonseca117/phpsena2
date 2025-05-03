@@ -17,7 +17,7 @@
                                 </span>
                             </div>
             
-                            <input type="text" class="form-control" id="producto" name="registroNombre">
+                            <input type="text" class="form-control" id="producto" name="prod_nombre">
             
                         </div>
                         
@@ -34,7 +34,7 @@
                                 </span>
                             </div>
             
-                            <input type="text" class="form-control" id="cantidad" name="registroCantidad">
+                            <input type="text" class="form-control" id="cantidad" name="prod_cantidad">
             
                         </div>
                         
@@ -52,11 +52,31 @@
                                 </span>
                             </div>
             
-                            <input type="text" class="form-control" id="precio" name="registroPrecio">
+                            <input type="text" class="form-control" id="precio" name="prod_precio">
                         
                         </div>
                         
                     </div>
+
+                    <?php
+
+                    /*=============================================
+                    FORMA EN QUE SE INSTA­NCIA LA CLASE DE UN MÉTODO ESTÁTICO
+                    =============================================*/
+
+                    $producto = ControladorProducto::ctrProducto();
+
+                    if ($producto === 'ok') {
+                        // Aquí sí entra cuando el método devuelve "ok"
+                        echo '<script>
+                            if (window.history.replaceState) {
+                                window.history.replaceState(null, null, window.location.href);
+                            }
+                        </script>';
+                        echo '<div class="alert alert-success">El usuario ha sido registrado</div>';
+                    }
+
+                ?>
             
            
                 
