@@ -32,6 +32,7 @@
                             $_GET["modulo"] == "contenido" ||
                             $_GET["modulo"] == "producto" ||
                             $_GET["modulo"] == "perfil" ||
+                            $_GET["modulo"] == "anime" ||
                             $_GET["modulo"] == "salir"){
 
                             include "modulos/".$_GET["modulo"].".php";

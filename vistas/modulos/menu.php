@@ -17,7 +17,9 @@
                 <li class="nav-item">
                     <a href="index.php?modulo=perfil" class="nav-link">Perfiles</a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="index.php?modulo=anime" class="nav-link">Anime</a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Salir</a>
                 </li>

@@ -7,7 +7,7 @@ class ControladorAnime{
 
         if(isset($_POST["anim_nombre"])){
 
-            $tabla = "productos";
+            $tabla = "anime";
 
             $datos = array(
                 "anim_nombre" => $_POST["anim_nombre"],
@@ -15,7 +15,7 @@ class ControladorAnime{
 
             );
 
-            $respuesta = ModeloProducto::mdlProducto($tabla, $datos);
+            $respuesta = ModeloAnime::mdlAnime($tabla, $datos);
 
             return $respuesta;
 
