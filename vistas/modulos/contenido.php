@@ -7,7 +7,7 @@ if (!isset($_SESSION["validarIngreso"]) || $_SESSION["validarIngreso"] !== "ok")
 
 // Obtenemos todos los registros de la tabla "registros"
 $registros = ControladorRegistro::ctrSeleccionarRegistro();
-
+//var_dump($registros);
 ?>
 <div class="container-fluid">
     <div class="container py-5">
@@ -39,7 +39,7 @@ $registros = ControladorRegistro::ctrSeleccionarRegistro();
                                             value="<?= htmlspecialchars($registro['id'], ENT_QUOTES, 'UTF-8') ?>"
                                         >
                                         <div class="px-1">
-                                            <a href="index.php?pagina=editar&id=<?php echo $registro['id']; ?>" class="btn btn-warning">
+                                            <a href="index.php?modulo=editar&id=<?php echo $registro['id']; ?>" class="btn btn-warning">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
                                         
